@@ -1,0 +1,11 @@
+.container{
+    width: 100vw;
+    /* float: left; */
+}
+.pic img{
+    width: 10vw;
+}
+.title{
+    font-weight: bold;
+    margin-bottom: 1em;
+}
