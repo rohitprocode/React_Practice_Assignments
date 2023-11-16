@@ -20,8 +20,8 @@ function App() {
         ></VideoGallery>)
       }
       <div style={{clear:'both'}}>
-      <PlayButton name={'Play Button'} message={'Play Button Clicked'}/>
-      <PlayButton name={'Pause Button'} message={'Pause Button Clicked'}/>
+      <PlayButton message={'Play Button Clicked'} onTapbtn={()=>console.log("Hii Play Btn")} >Play Button</PlayButton>
+      <PlayButton message={'Pause Button Clicked'} onTapbtn={()=>alert("Hii Pause Btn")} >Pause Button</PlayButton>
      
       </div>
     </div>

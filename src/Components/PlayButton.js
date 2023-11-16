@@ -1,12 +1,12 @@
 import React from 'react'
 import './PlayButton.css'
 
-function PlayButton({name,message}) {
+function PlayButton({message,children,onTapbtn}) {
     function handleClick(){
-        alert(message)
+        onTapbtn()
     }
   return (
-      <button onClick={handleClick}>{name}</button>
+      <button onClick={handleClick}>{children}</button>
   )
 }
 
