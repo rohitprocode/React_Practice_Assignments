@@ -1,11 +1,12 @@
-import './App.css';
-import VideoGallery from './Components/VideoGallery';
+import React from 'react'
+import VideoGallery from './Components/VideoGallery'
 
 function App() {
-    return <div className="App">
-    <h1>Welcome to Video Gallery </h1>
+  return (
+    <>
     <VideoGallery/>
-    </div>
+    </>
+  )
 }
 
-export default App;
+export default App
