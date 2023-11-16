@@ -1,12 +1,13 @@
 import React from 'react'
+import './VideoGallery.css'
 
-function VideoGallery() {
+function VideoGallery({id,title,channel,views,time}) {
   return (
     <div className='container'>
-    <div className="image"><img src="https://picsum.photos/id/1/180/100" alt=""/></div>
-      <div className="title">Welcome to React Tutorial</div>
-      <div className="channel">Emiway Bantai</div>
-      <div className="views">558M views <span>.</span> 3 years ago</div>
+    <div className="image"><img src={`https://picsum.photos/id/${id}/180/100`} alt=""/></div>
+      <div className="title">{title}</div>
+      <div className="channel">{channel}</div>
+      <div className="views">{views} views <span>.</span> {time}</div>
     </div>
   )
 }
