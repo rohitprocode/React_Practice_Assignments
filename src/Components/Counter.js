@@ -6,7 +6,7 @@ function Counter() {
         e.stopPropagation();
         console.log("CounterClicked and ",numberValue)
         setNumberValue(
-            numberValue+1
+            numberValue=>numberValue+1
         )
     }
   return (

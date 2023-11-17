@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import VideoGallery from './Components/VideoGallery'
 import videoData from './data/data'
@@ -6,11 +6,19 @@ import PlayButton from './Components/PlayButton'
 import Counter from './Components/Counter'
 
 function App() {
+
+  const [NewVideos,setNewVideos] = useState(videoData)
  
+  function addNewVideo(){
+    setNewVideos([])
+  }
+
   return (
     <div className='App' onClick={()=>console.log("App.js Clicked")}>
+
+      <button onClick={addNewVideo} >Add New Video</button>
       {
-        videoData.map(video=><VideoGallery
+        NewVideos.map(video=><VideoGallery
           id={video.id}
           title= {video.title}
           channel= {video.channel}
