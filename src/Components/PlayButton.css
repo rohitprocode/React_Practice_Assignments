@@ -1,11 +1,12 @@
 button{
-    width:100px;
+    width:fit-content;
     height:50px;
     background-color:black;
     color:red;
     font-size:20px;
     font-weight:bold;
-    border:2px solid white
+    border:2px solid white;
+    border-radius: 5px;
 }
 
 button:hover{
