@@ -3,6 +3,7 @@ import './App.css'
 import VideoGallery from './Components/VideoGallery'
 import videoData from './data/data'
 import PlayButton from './Components/PlayButton'
+import Counter from './Components/Counter'
 
 function App() {
  
@@ -24,7 +25,7 @@ function App() {
         </VideoGallery>)
       }
       <div style={{clear:'both'}}>
-
+      <Counter/>
       {/* <PlayButton message={'Pause Button Clicked'} onTapbtn={()=>alert("Hii Pause Btn")} >Pause Button</PlayButton> */}
      
       </div>
