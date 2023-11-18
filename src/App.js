@@ -5,12 +5,23 @@ import videoData from './data/data'
 import PlayButton from './Components/PlayButton'
 import Counter from './Components/Counter'
 
+
 function App() {
 
   const [NewVideos,setNewVideos] = useState(videoData)
  
   function addNewVideo(){
-    setNewVideos([])
+    setNewVideos([...NewVideos,
+      {
+        id:NewVideos.length+1,
+        title:'Rohit',
+        channel:'Realfunrr',
+        views:'100B',
+        time:'5 months ago',
+        verified:true,
+        
+      }
+    ])
   }
 
   return (
