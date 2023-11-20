@@ -1,24 +1,28 @@
 import React, { useState } from 'react'
 import './AddNewVideo.css'
 
-function AddNewVideo() {
+function AddNewVideo({addingNewVideo}) {
   const[makeNewVideo,SetMakeNewVideo] = useState({
     channel:'Coder Dost',
     time:'3 weeks ago',
     verified:true,
   })
 
+  function handleSubmit(e){
+    e.preventDefault();
+    addingNewVideo(makeNewVideo)
+    // console.log(makeNewVideo)
+  }
+
   function handleInput(e){
-    console.log(e.target.name , e.target.value)
+    // console.log(e.target.name , e.target.value)
     SetMakeNewVideo({...makeNewVideo,
       [e.target.name] : e.target.value
     })
-    console.log(makeNewVideo)
+    // console.log(makeNewVideo)
   }
 
-  function handleSubmit(e){
-    e.preventDefault();
-  }
+  
 
   return (
     <form>

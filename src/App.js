@@ -10,12 +10,16 @@ function App() {
 
   const [NewVideos, setNewVideos] = useState(videoData)
 
-
+  function addingNewVideo(makeNewVideo){
+    setNewVideos([...NewVideos,
+      { ...makeNewVideo, id : NewVideos.length+1 }
+    ])
+  }
 
   return (
     <div className='App' onClick={() => console.log("App.js Clicked")}>
 
-     
+      <AddNewVideo addingNewVideo={addingNewVideo}  />
       {/* <button onClick={addNewVideo} >Add New Video</button> */}
       {
         NewVideos.map(video => <VideoGallery
@@ -33,7 +37,7 @@ function App() {
         </VideoGallery>)
       }
       <div style={{ clear: 'both' }}>
-      <AddNewVideo />
+
         {/* <Counter/> */}
         {/* <PlayButton message={'Pause Button Clicked'} onTapbtn={()=>alert("Hii Pause Btn")} >Pause Button</PlayButton> */}
 
