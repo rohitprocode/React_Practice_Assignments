@@ -6,11 +6,20 @@ function AddNewVideo({addingNewVideo}) {
     channel:'Coder Dost',
     time:'3 weeks ago',
     verified:true,
+    title:'',
+    views:''
   })
 
   function handleSubmit(e){
     e.preventDefault();
     addingNewVideo(makeNewVideo)
+    SetMakeNewVideo({
+      channel:'Coder Dost',
+      time:'3 weeks ago',
+      verified:true,
+      title:'',
+      views:''
+    })
     // console.log(makeNewVideo)
   }
 
@@ -26,8 +35,8 @@ function AddNewVideo({addingNewVideo}) {
 
   return (
     <form>
-      <input type="text" name="title" onChange={handleInput} onClick={(e)=>e.stopPropagation()} placeholder='Title' />
-      <input type="text" name="views" onChange={handleInput} onClick={(e)=>e.stopPropagation()} placeholder='Views' />
+      <input type="text" name="title" onChange={handleInput} onClick={(e)=>e.stopPropagation()} placeholder='Title' value={makeNewVideo.title} />
+      <input type="text" name="views" onChange={handleInput} onClick={(e)=>e.stopPropagation()} placeholder='Views' value={makeNewVideo.views}/>
       <button onClick={handleSubmit}>Click</button>
     </form>
   )
