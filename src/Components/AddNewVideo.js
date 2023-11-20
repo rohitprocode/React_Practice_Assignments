@@ -1,25 +1,21 @@
 import React, { useState } from 'react'
 import './AddNewVideo.css'
 
-function AddNewVideo({addingNewVideo}) {
-  const[makeNewVideo,SetMakeNewVideo] = useState({
+ const makeNewVideoData = {
     channel:'Coder Dost',
     time:'3 weeks ago',
     verified:true,
     title:'',
     views:''
-  })
+}
+
+function AddNewVideo({addingNewVideo}) {
+  const[makeNewVideo,SetMakeNewVideo] = useState(makeNewVideoData)
 
   function handleSubmit(e){
     e.preventDefault();
     addingNewVideo(makeNewVideo)
-    SetMakeNewVideo({
-      channel:'Coder Dost',
-      time:'3 weeks ago',
-      verified:true,
-      title:'',
-      views:''
-    })
+    SetMakeNewVideo(makeNewVideoData)
     // console.log(makeNewVideo)
   }
 
