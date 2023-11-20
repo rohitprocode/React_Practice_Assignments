@@ -5,6 +5,7 @@ import videoData from './data/data'
 import PlayButton from './Components/PlayButton'
 import Counter from './Components/Counter'
 import AddNewVideo from './Components/AddNewVideo'
+import VideoList from './Components/VideoList'
 
 function App() {
 
@@ -21,21 +22,7 @@ function App() {
 
       <AddNewVideo addingNewVideo={addingNewVideo}  />
       {/* <button onClick={addNewVideo} >Add New Video</button> */}
-      {
-        NewVideos.map(video => <VideoGallery
-          id={video.id}
-          title={video.title}
-          channel={video.channel}
-          views={video.views}
-          time={video.time}
-          verified={video.verified}
-          key={video.id}
-        >
-          <PlayButton
-            onOneTapbtn={() => console.log("Playing..", video.title)}
-            onTwoTapbtn={() => console.log("Paused..", video.title)} >{video.title}</PlayButton>
-        </VideoGallery>)
-      }
+      <VideoList NewVideos={NewVideos}/>
       <div style={{ clear: 'both' }}>
 
         {/* <Counter/> */}
