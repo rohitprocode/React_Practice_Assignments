@@ -3,16 +3,19 @@ import './AddNewVideo.css'
 
 function AddNewVideo() {
 
-  function handleClick(e){
+  function handleInput(e){
+    console.log(e.target.name , e.target.value)
+  }
+
+  function handleSubmit(e){
     e.preventDefault();
-    console.log(e)
   }
 
   return (
     <form>
-      <input type="text" name="" id="" placeholder='Title' />
-      <input type="text" name="" id="" placeholder='Views' />
-      <button onClick={handleClick}>Click</button>
+      <input type="text" name="title" onChange={handleInput} placeholder='Title' />
+      <input type="text" name="views" onChange={handleInput} placeholder='Views' />
+      <button onClick={handleSubmit}>Click</button>
     </form>
   )
 }
