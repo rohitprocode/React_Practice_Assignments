@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './AddNewVideo.css'
 
 function AddNewVideo() {
+  const[makeNewVideo,SetMakeNewVideo] = useState({
+    channel:'Coder Dost',
+    time:'3 weeks ago',
+    verified:true,
+  })
 
   function handleInput(e){
     console.log(e.target.name , e.target.value)
+    SetMakeNewVideo({...makeNewVideo,
+      [e.target.name] : e.target.value
+    })
+    console.log(makeNewVideo)
   }
 
   function handleSubmit(e){
@@ -13,8 +22,8 @@ function AddNewVideo() {
 
   return (
     <form>
-      <input type="text" name="title" onChange={handleInput} placeholder='Title' />
-      <input type="text" name="views" onChange={handleInput} placeholder='Views' />
+      <input type="text" name="title" onChange={handleInput} onClick={(e)=>e.stopPropagation()} placeholder='Title' />
+      <input type="text" name="views" onChange={handleInput} onClick={(e)=>e.stopPropagation()} placeholder='Views' />
       <button onClick={handleSubmit}>Click</button>
     </form>
   )
