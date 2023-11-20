@@ -21,13 +21,9 @@ function App() {
     <div className='App' onClick={() => console.log("App.js Clicked")}>
 
       <AddNewVideo addingNewVideo={addingNewVideo}  />
-      {/* <button onClick={addNewVideo} >Add New Video</button> */}
+
       <VideoList NewVideos={NewVideos}/>
       <div style={{ clear: 'both' }}>
-
-        {/* <Counter/> */}
-        {/* <PlayButton message={'Pause Button Clicked'} onTapbtn={()=>alert("Hii Pause Btn")} >Pause Button</PlayButton> */}
-
       </div>
     </div>
   )

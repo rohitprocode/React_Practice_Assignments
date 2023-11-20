@@ -16,18 +16,13 @@ function AddNewVideo({addingNewVideo}) {
     e.preventDefault();
     addingNewVideo(makeNewVideo)
     SetMakeNewVideo(makeNewVideoData)
-    // console.log(makeNewVideo)
   }
 
   function handleInput(e){
-    // console.log(e.target.name , e.target.value)
     SetMakeNewVideo({...makeNewVideo,
       [e.target.name] : e.target.value
     })
-    // console.log(makeNewVideo)
   }
-
-  
 
   return (
     <form>
@@ -39,15 +34,3 @@ function AddNewVideo({addingNewVideo}) {
 }
 
 export default AddNewVideo
-
-// setNewVideos([...NewVideos,
-//   {
-//     id:NewVideos.length+1,
-//     title:'Rohit',
-//     channel:'Realfunrr',
-//     views:'100B',
-//     time:'5 months ago',
-//     verified:true,
-    
-//   }
-// ])
