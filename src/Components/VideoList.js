@@ -2,7 +2,7 @@ import React from 'react'
 import PlayButton from './PlayButton'
 import VideoGallery from './VideoGallery'
 
-function VideoList({NewVideos,deleteVideo}) {
+function VideoList({NewVideos,deleteVideo,editVideo}) {
   return (
     <>
     {
@@ -15,6 +15,7 @@ function VideoList({NewVideos,deleteVideo}) {
           verified={video.verified}
           key={video.id}
           deleteVideo={deleteVideo}
+          editVideo={editVideo}
         >
           <PlayButton
             onOneTapbtn={() => console.log("Playing..", video.title)}

@@ -17,12 +17,17 @@ function App() {
   function deleteVideo(id){
     setNewVideos(NewVideos.filter(video=>video.id!=id))
   }
+
+  function editVideo(id){
+    console.log("EditVideo = " , id)
+  }
+
   return (
     <div className='App' onClick={() => console.log("App.js Clicked")}>
 
       <AddNewVideo addingNewVideo={addingNewVideo}  />
 
-      <VideoList deleteVideo={deleteVideo} NewVideos={NewVideos}/>
+      <VideoList deleteVideo={deleteVideo} editVideo={editVideo} NewVideos={NewVideos}/>
       <div style={{ clear: 'both' }}>
       </div>
     </div>
