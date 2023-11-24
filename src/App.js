@@ -14,8 +14,8 @@ function App() {
     ])
   }
 
-  function deleteVideo(deleteVid){
-    console.log(deleteVid)
+  function deleteVideo(id){
+    setNewVideos(NewVideos.filter(video=>video.id!=id))
   }
   return (
     <div className='App' onClick={() => console.log("App.js Clicked")}>
