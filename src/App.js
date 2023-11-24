@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
-import VideoGallery from './Components/VideoGallery'
 import videoData from './data/data'
-import PlayButton from './Components/PlayButton'
-import Counter from './Components/Counter'
 import AddNewVideo from './Components/AddNewVideo'
 import VideoList from './Components/VideoList'
 
@@ -17,12 +14,15 @@ function App() {
     ])
   }
 
+  function deleteVideo(deleteVid){
+    console.log(deleteVid)
+  }
   return (
     <div className='App' onClick={() => console.log("App.js Clicked")}>
 
       <AddNewVideo addingNewVideo={addingNewVideo}  />
 
-      <VideoList NewVideos={NewVideos}/>
+      <VideoList deleteVideo={deleteVideo} NewVideos={NewVideos}/>
       <div style={{ clear: 'both' }}>
       </div>
     </div>
