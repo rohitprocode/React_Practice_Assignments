@@ -9,7 +9,7 @@ import './AddNewVideo.css'
     views:''
 }
 
-function AddNewVideo({addingNewVideo}) {
+function AddNewVideo({addingNewVideo,editableVideo}) {
   const[makeNewVideo,SetMakeNewVideo] = useState(makeNewVideoData)
 
   function handleSubmit(e){
@@ -26,9 +26,23 @@ function AddNewVideo({addingNewVideo}) {
 
   return (
     <form>
-      <input type="text" name="title" onChange={handleInput} onClick={(e)=>e.stopPropagation()} placeholder='Title' value={makeNewVideo.title} />
-      <input type="text" name="views" onChange={handleInput} onClick={(e)=>e.stopPropagation()} placeholder='Views' value={makeNewVideo.views}/>
-      <button onClick={handleSubmit}>Click</button>
+      <input 
+        type="text" 
+        name="title" 
+        onChange={handleInput} 
+        onClick={(e)=>e.stopPropagation()} 
+        placeholder='Title' 
+        value={makeNewVideo.title}  
+      />
+      <input 
+        type="text" 
+        name="views" 
+        onChange={handleInput} 
+        onClick={(e)=>e.stopPropagation()} 
+        placeholder='Views' 
+        value={makeNewVideo.views}
+      />
+      <button onClick={handleSubmit}>Add New Video Content</button>
     </form>
   )
 }
