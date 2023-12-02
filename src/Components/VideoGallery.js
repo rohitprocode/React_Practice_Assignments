@@ -1,7 +1,7 @@
 import React from 'react'
 import './VideoGallery.css'
 
-function VideoGallery({ id, title, channel, views, time, verified, children,deleteVideo,editVideo }) {
+function VideoGallery({ id, title, channel, views, time, verified, children, deleteVideo, editVideo }) {
   return (
     <div className='container'>
       <button className="close" onClick={()=>deleteVideo(id)} >X</button>

@@ -27,6 +27,7 @@ function App() {
       <AddNewVideo addingNewVideo={addingNewVideo} editableVideo={editableVideo} />
 
       <VideoList deleteVideo={deleteVideo} editVideo={editVideo} NewVideos={NewVideos}/>
+
       <div style={{ clear: 'both' }}>
       </div>
     </div>

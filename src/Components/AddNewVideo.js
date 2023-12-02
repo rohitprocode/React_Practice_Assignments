@@ -30,8 +30,6 @@ function AddNewVideo({addingNewVideo,editableVideo}) {
     }
     },[SetMakeNewVideo])
    
-  
-
   return (
     <form>
       <input 
@@ -50,7 +48,11 @@ function AddNewVideo({addingNewVideo,editableVideo}) {
         placeholder='Views' 
         value={makeNewVideo.views}
       />
-      <button onClick={handleSubmit}>Add New Video Content</button>
+      <button 
+        onClick={handleSubmit}
+        >
+        {editableVideo ? 'Edit' : 'Add' } Video
+        </button>
     </form>
   )
 }
