@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './AddNewVideo.css'
 
  const makeNewVideoData = {
@@ -23,6 +23,14 @@ function AddNewVideo({addingNewVideo,editableVideo}) {
       [e.target.name] : e.target.value
     })
   }
+
+  useEffect(()=>{
+    if(editableVideo){
+      SetMakeNewVideo(editableVideo)
+    }
+    },[SetMakeNewVideo])
+   
+  
 
   return (
     <form>
