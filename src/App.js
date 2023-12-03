@@ -18,13 +18,17 @@ function App() {
   }
 
   function editVideo(id){
-    console.log(NewVideos.find(video=>video.id==id))
+    setEditableVideo(NewVideos.find(video=>video.id==id))
+  }
+
+  function updateVideo(updatedVideo){
+    //
   }
 
   return (
     <div className='App' onClick={() => console.log("App.js Clicked")}>
 
-      <AddNewVideo addingNewVideo={addingNewVideo} editableVideo={editableVideo} />
+      <AddNewVideo addingNewVideo={addingNewVideo} updateVideo={updateVideo} editableVideo={editableVideo} />
 
       <VideoList deleteVideo={deleteVideo} editVideo={editVideo} NewVideos={NewVideos}/>
 

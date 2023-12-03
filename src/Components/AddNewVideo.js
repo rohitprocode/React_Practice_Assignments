@@ -9,12 +9,17 @@ import './AddNewVideo.css'
     views:''
 }
 
-function AddNewVideo({addingNewVideo,editableVideo}) {
+function AddNewVideo({addingNewVideo,updateVideo,editableVideo}) {
   const[makeNewVideo,SetMakeNewVideo] = useState(makeNewVideoData)
 
   function handleSubmit(e){
     e.preventDefault();
-    addingNewVideo(makeNewVideo)
+    if(editableVideo){
+      updateVideo(makeNewVideo)
+    }else{
+      addingNewVideo(makeNewVideo)
+    }
+    // addingNewVideo(makeNewVideo)
     SetMakeNewVideo(makeNewVideoData)
   }
 
@@ -28,7 +33,7 @@ function AddNewVideo({addingNewVideo,editableVideo}) {
     if(editableVideo){
       SetMakeNewVideo(editableVideo)
     }
-    },[SetMakeNewVideo])
+    },[updateVideo])
    
   return (
     <form>
